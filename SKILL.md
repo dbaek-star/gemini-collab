@@ -49,7 +49,7 @@ questions:
         description: "초안→검토→최종. 빠른 협업"
       - label: "Adaptive Round"
         description: "양쪽 합의 시까지 반복 (최대 5라운드)"
-      - label: "Dog Fight"
+      - label: "Devil's Advocate"
         description: "비판적 토론, 한쪽 패배 시까지 (무제한)"
   - question: "Gemini 모델을 선택해주세요."
     header: "Gemini 모델"
@@ -85,7 +85,7 @@ Fallback 우선순위: 선택한 모델부터 하위 모델로 자동 전환. �
 | [1] 1 Round | 초안→검토→판단→최종 | 1회 |
 | [2] 2 Round (기본) | 초안→검토→수정→재검토→최종판단→최종 | 2회 |
 | [3] Adaptive | [2] 반복, 합의 시 종료 | 1~5회 |
-| [4] Dog Fight | 주장→반박 무한 반복, 패배 선언 시 종료 | 무제한 |
+| [4] Devil's Advocate | 주장→반박 무한 반복, 패배 선언 시 종료 | 무제한 |
 
 ## 프롬프트 생성 규칙
 
@@ -109,7 +109,7 @@ Fallback 우선순위: 선택한 모델부터 하위 모델로 자동 전환. �
 
 포함 항목: 사용 모델, Fallback 여부, web_searched 상태, 모드, 총 라운드 수, 원래 요청 요약, 라운드별 주요 결정 (반영/미반영 항목과 이유), 작업 결과물 요약, 산출물 위치.
 - [3] Adaptive: 합의/강제종료 여부 추가
-- [4] Dog Fight: 승패 결과, 핵심 논점 추가
+- [4] Devil's Advocate: 승패 결과, 핵심 논점 추가
 
 ## context.md 업데이트
 
@@ -129,4 +129,4 @@ Fallback 우선순위: 선택한 모델부터 하위 모델로 자동 전환. �
 
 - 모델 Fallback 발생 시 반드시 사용자에게 알림
 - Gemini CLI 인증 정보를 산출물 파일에 포함하지 않을 것
-- [4] Dog Fight: 종료 조건·금지사항은 [references/modes.md](references/modes.md) 참조
+- [4] Devil's Advocate: 종료 조건·금지사항은 [references/modes.md](references/modes.md) 참조
