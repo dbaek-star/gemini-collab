@@ -19,6 +19,10 @@ import argparse
 import os
 import shutil
 
+# Fix Windows cp949 stdout encoding issue for Unicode characters
+sys.stdout.reconfigure(encoding="utf-8")
+sys.stderr.reconfigure(encoding="utf-8")
+
 # Fixed prompt always sent to gemini CLI -p option
 FIXED_PROMPT = "입력된 자료에 대한 답변요청. 필요한 경우 웹 검색을 통해 최신 정보를 조사하여 활용하고, 출처를 함께 제시. ultrathink"
 
