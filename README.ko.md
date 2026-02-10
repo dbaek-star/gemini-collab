@@ -259,14 +259,16 @@ git clone https://github.com/dbaek-star/gemini-collab.git
 
 ```bash
 mkdir -p ~/.claude/skills/gemini-collab
-cp -r gemini-collab/. ~/.claude/skills/gemini-collab/
+cp -r gemini-collab/SKILL.md gemini-collab/scripts gemini-collab/references ~/.claude/skills/gemini-collab/
 ```
 
 #### Windows — CMD
 
 ```cmd
 mkdir "%USERPROFILE%\.claude\skills\gemini-collab"
-xcopy /E /I /Y "gemini-collab" "%USERPROFILE%\.claude\skills\gemini-collab\"
+xcopy /E /I /Y "gemini-collab\SKILL.md" "%USERPROFILE%\.claude\skills\gemini-collab\"
+xcopy /E /I /Y "gemini-collab\scripts" "%USERPROFILE%\.claude\skills\gemini-collab\scripts"
+xcopy /E /I /Y "gemini-collab\references" "%USERPROFILE%\.claude\skills\gemini-collab\references"
 ```
 
 #### Windows — PowerShell
@@ -274,14 +276,16 @@ xcopy /E /I /Y "gemini-collab" "%USERPROFILE%\.claude\skills\gemini-collab\"
 ```powershell
 $dest = "$env:USERPROFILE\.claude\skills\gemini-collab"
 New-Item -ItemType Directory -Force -Path $dest | Out-Null
-Copy-Item -Path ".\gemini-collab\*" -Destination $dest -Recurse -Force
+Copy-Item -Path ".\gemini-collab\SKILL.md" -Destination $dest
+Copy-Item -Path ".\gemini-collab\scripts" -Destination $dest -Recurse -Force
+Copy-Item -Path ".\gemini-collab\references" -Destination $dest -Recurse -Force
 ```
 
 #### macOS / Linux
 
 ```bash
 mkdir -p ~/.claude/skills/gemini-collab
-cp -r gemini-collab/. ~/.claude/skills/gemini-collab/
+cp -r gemini-collab/SKILL.md gemini-collab/scripts gemini-collab/references ~/.claude/skills/gemini-collab/
 ```
 
 ### 3. 설치 확인
