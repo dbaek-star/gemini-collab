@@ -253,12 +253,19 @@ gemini --version
 # 저장소 클론
 git clone https://github.com/dbaek-star/gemini-collab-.git
 
-# Claude Code 스킬 디렉토리에 복사
+# 스킬 디렉토리 생성 (없는 경우)
 # Windows
-xcopy /E /I gemini-collab "%USERPROFILE%\.claude\skills\gemini-collab"
+mkdir "%USERPROFILE%\.claude\skills" 2>nul
 
 # macOS / Linux
-cp -r gemini-collab ~/.claude/skills/gemini-collab
+mkdir -p ~/.claude/skills
+
+# Claude Code 스킬 디렉토리에 복사
+# Windows
+xcopy /E /I gemini-collab- "%USERPROFILE%\.claude\skills\gemini-collab"
+
+# macOS / Linux
+cp -r gemini-collab- ~/.claude/skills/gemini-collab
 ```
 
 ### 3. 설치 확인

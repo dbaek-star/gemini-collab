@@ -253,12 +253,19 @@ gemini --version
 # Clone this repository
 git clone https://github.com/dbaek-star/gemini-collab-.git
 
-# Copy to Claude Code skills directory
+# Create skills directory (if it doesn't exist)
 # Windows
-xcopy /E /I gemini-collab "%USERPROFILE%\.claude\skills\gemini-collab"
+mkdir "%USERPROFILE%\.claude\skills" 2>nul
 
 # macOS / Linux
-cp -r gemini-collab ~/.claude/skills/gemini-collab
+mkdir -p ~/.claude/skills
+
+# Copy to Claude Code skills directory
+# Windows
+xcopy /E /I gemini-collab- "%USERPROFILE%\.claude\skills\gemini-collab"
+
+# macOS / Linux
+cp -r gemini-collab- ~/.claude/skills/gemini-collab
 ```
 
 ### 3. Verify
