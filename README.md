@@ -251,7 +251,7 @@ gemini --version
 
 ```bash
 # Clone this repository
-git clone https://github.com/dbaek-star/gemini-collab.git
+git clone https://github.com/dbaek-star/gemini-collab-.git
 
 # Copy to Claude Code skills directory
 # Windows
