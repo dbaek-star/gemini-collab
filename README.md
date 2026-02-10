@@ -252,20 +252,27 @@ gemini --version
 ```bash
 # Clone this repository
 git clone https://github.com/dbaek-star/gemini-collab-.git
+```
 
-# Create skills directory (if it doesn't exist)
-# Windows
+#### Windows (CMD)
+
+```cmd
 mkdir "%USERPROFILE%\.claude\skills" 2>nul
-
-# macOS / Linux
-mkdir -p ~/.claude/skills
-
-# Copy to Claude Code skills directory
-# Windows
 xcopy /E /I gemini-collab- "%USERPROFILE%\.claude\skills\gemini-collab"
+```
 
-# macOS / Linux
-cp -r gemini-collab- ~/.claude/skills/gemini-collab
+#### Windows (PowerShell)
+
+```powershell
+New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.claude\skills" | Out-Null
+Copy-Item -Recurse -Force .\gemini-collab-\* "$env:USERPROFILE\.claude\skills\gemini-collab"
+```
+
+#### macOS / Linux
+
+```bash
+mkdir -p ~/.claude/skills/gemini-collab
+cp -r gemini-collab-/. ~/.claude/skills/gemini-collab/
 ```
 
 ### 3. Verify
