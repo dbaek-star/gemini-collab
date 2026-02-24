@@ -28,7 +28,7 @@ FIXED_PROMPT = "입력된 자료에 대한 답변요청. 필요한 경우 웹 �
 
 # Fallback chain in priority order. When a model fails, try the next one.
 FALLBACK_CHAIN = [
-    "gemini-3-pro-preview",
+    "gemini-3.1-pro-preview",
     "gemini-3-flash-preview",
     "gemini-2.5-pro",
     "gemini-2.5-flash",
@@ -222,7 +222,6 @@ def main():
     parser.add_argument("-p", "--prompt", required=True, help="Detailed instructions (prepended to input file content in stdin)")
     parser.add_argument("-o", "--output", help="Save response text to this file")
     parser.add_argument("-m", "--model", default=None,
-                        choices=FALLBACK_CHAIN,
                         help=f"Primary model to use (default: {DEFAULT_MODEL}). Falls back to lower-priority models on failure.")
     parser.add_argument("--resume", nargs="?", const="latest", default=None, help="Resume Gemini session (session_id or 'latest')")
     parser.add_argument("--context", nargs="*", default=None, help="Context files to include when --resume fails")

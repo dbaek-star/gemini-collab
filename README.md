@@ -324,7 +324,7 @@ When triggered, the skill presents two simultaneous selection prompts:
 └────────────────────────────────────────────────┘
 
 ┌─ Gemini Model ─────────────────────────────────┐
-│  ● gemini-3-pro (Recommended)                  │
+│  ● gemini-3.1-pro (Recommended)                  │
 │  ○ gemini-3-flash                              │
 │  ○ gemini-2.5-pro                              │
 │  ○ gemini-2.5-flash                            │
@@ -353,7 +353,7 @@ When triggered, the skill presents two simultaneous selection prompts:
 
 | Model | API ID | Best For |
 |:------|:-------|:---------|
-| **Gemini 3 Pro** | `gemini-3-pro-preview` | Complex reasoning & coding |
+| **Gemini 3.1 Pro** | `gemini-3.1-pro-preview` | Complex reasoning & coding |
 | **Gemini 3 Flash** | `gemini-3-flash-preview` | Fast, cost-effective general tasks |
 | **Gemini 2.5 Pro** | `gemini-2.5-pro` | Stable, proven performance |
 | **Gemini 2.5 Flash** | `gemini-2.5-flash` | Lightweight, simple tasks |
@@ -363,7 +363,7 @@ When triggered, the skill presents two simultaneous selection prompts:
 If the selected model is unavailable, the system automatically falls back to the next available model:
 
 ```
-gemini-3-pro-preview
+gemini-3.1-pro-preview
         ↓ (fail)
 gemini-3-flash-preview
         ↓ (fail)
@@ -444,7 +444,7 @@ python gemini_call.py INPUT_FILE \
 ```json
 {
   "success": true,
-  "model": "gemini-3-pro-preview",
+  "model": "gemini-3.1-pro-preview",
   "fallback": false,
   "session_id": "abc123",
   "resume_failed": false,
@@ -463,7 +463,7 @@ python gemini_call.py INPUT_FILE \
 
 ```
 > Collaborate with Gemini to plan a real-time notification system
-> Mode: 2 Round | Model: gemini-3-pro
+> Mode: 2 Round | Model: gemini-3.1-pro
 
 Result: Claude drafts architecture → Gemini identifies scaling concerns
 → Claude revises with event-driven approach → Gemini validates → Final output
@@ -483,7 +483,7 @@ error handling patterns, and authentication flow
 
 ```
 > Devil's Advocate: Should we use microservices or monolith for our startup?
-> Mode: Devil's Advocate | Model: gemini-3-pro
+> Mode: Devil's Advocate | Model: gemini-3.1-pro
 
 Result: Claude argues for monolith (simplicity, speed)
 ↔ Gemini argues for microservices (scalability, team independence)

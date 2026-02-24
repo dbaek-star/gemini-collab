@@ -324,7 +324,7 @@ Claude Code를 열고 트리거 문구를 입력합니다:
 └────────────────────────────────────────────────┘
 
 ┌─ Gemini 모델 ──────────────────────────────────┐
-│  ● gemini-3-pro (추천)                         │
+│  ● gemini-3.1-pro (추천)                         │
 │  ○ gemini-3-flash                              │
 │  ○ gemini-2.5-pro                              │
 │  ○ gemini-2.5-flash                            │
@@ -353,7 +353,7 @@ Claude Code를 열고 트리거 문구를 입력합니다:
 
 | 모델 | API ID | 적합한 용도 |
 |:------|:-------|:------------|
-| **Gemini 3 Pro** | `gemini-3-pro-preview` | 복잡한 추론 & 코딩 |
+| **Gemini 3.1 Pro** | `gemini-3.1-pro-preview` | 복잡한 추론 & 코딩 |
 | **Gemini 3 Flash** | `gemini-3-flash-preview` | 빠르고 경제적인 일반 작업 |
 | **Gemini 2.5 Pro** | `gemini-2.5-pro` | 안정적이고 검증된 성능 |
 | **Gemini 2.5 Flash** | `gemini-2.5-flash` | 경량, 단순 작업 |
@@ -363,7 +363,7 @@ Claude Code를 열고 트리거 문구를 입력합니다:
 선택한 모델이 사용 불가능한 경우, 다음 모델로 자동 전환됩니다:
 
 ```
-gemini-3-pro-preview
+gemini-3.1-pro-preview
         ↓ (실패)
 gemini-3-flash-preview
         ↓ (실패)
@@ -444,7 +444,7 @@ python gemini_call.py INPUT_FILE \
 ```json
 {
   "success": true,
-  "model": "gemini-3-pro-preview",
+  "model": "gemini-3.1-pro-preview",
   "fallback": false,
   "session_id": "abc123",
   "resume_failed": false,
@@ -463,7 +463,7 @@ python gemini_call.py INPUT_FILE \
 
 ```
 > Gemini와 협업해서 실시간 알림 시스템 설계해줘
-> 모드: 2 Round | 모델: gemini-3-pro
+> 모드: 2 Round | 모델: gemini-3.1-pro
 
 결과: Claude 아키텍처 초안 → Gemini 확장성 문제 지적
 → Claude 이벤트 기반 설계로 수정 → Gemini 검증 → 최종 산출물
@@ -483,7 +483,7 @@ python gemini_call.py INPUT_FILE \
 
 ```
 > AI끼리 토론해봐: 우리 스타트업에 마이크로서비스 vs 모놀리스 중 뭐가 좋을까?
-> 모드: Devil's Advocate | 모델: gemini-3-pro
+> 모드: Devil's Advocate | 모델: gemini-3.1-pro
 
 결과: Claude가 모놀리스 주장 (단순성, 속도)
 ↔ Gemini가 마이크로서비스 주장 (확장성, 팀 독립성)

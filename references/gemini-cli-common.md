@@ -19,7 +19,7 @@ python {스킬경로}/scripts/gemini_call.py INPUT_FILE -p "상세 지시사항"
 | `INPUT_FILE` | O | Gemini에 전달할 입력 파일 경로 (stdin의 "입력 자료" 섹션에 포함) |
 | `-p PROMPT` | O | 상세 지시사항 (stdin의 "지시사항" 섹션에 포함. 고정 프롬프트는 별도 자동 적용) |
 | `-o OUTPUT` | X | 응답 텍스트를 저장할 파일 경로 |
-| `-m MODEL` | X | 사용할 모델명 (기본: `gemini-3-pro-preview`). 실패 시 하위 모델로 자동 fallback |
+| `-m MODEL` | X | 사용할 모델명 (기본: `gemini-3.1-pro-preview`). 실패 시 하위 모델로 자동 fallback |
 | `--resume [SESSION_ID]` | X | 이전 세션 이어서 대화. session_id 지정 시 해당 세션, 생략 시 `latest` |
 | `--context FILE ...` | X | resume 실패 시 맥락 복원용 파일 목록 (이전 입력, 이전 응답 등) |
 | `--timeout N` | X | 타임아웃 초 (기본: 120) |
@@ -29,7 +29,7 @@ python {스킬경로}/scripts/gemini_call.py INPUT_FILE -p "상세 지시사항"
 선택한 모델부터 시작하여 하위 모델로 자동 전환:
 
 ```
-gemini-3-pro-preview → gemini-3-flash-preview → gemini-2.5-pro → gemini-2.5-flash → gemini-2.5-flash-lite
+gemini-3.1-pro-preview → gemini-3-flash-preview → gemini-2.5-pro → gemini-2.5-flash → gemini-2.5-flash-lite
 ```
 
 예: `-m gemini-2.5-pro` 지정 시 → `gemini-2.5-pro` → `gemini-2.5-flash` → `gemini-2.5-flash-lite` 순서로 시도.
@@ -39,7 +39,7 @@ gemini-3-pro-preview → gemini-3-flash-preview → gemini-2.5-pro → gemini-2.
 ```json
 {
   "success": true,
-  "model": "gemini-3-pro-preview",
+  "model": "gemini-3.1-pro-preview",
   "fallback": false,
   "session_id": "...",
   "resume_failed": false,
@@ -105,7 +105,7 @@ resume 실패 시 context 파일 포함:
 
 ### 자동 처리 항목
 
-- **모델 Fallback**: 선택 모델부터 하위 모델로 5단계 자동 전환 (3-pro → 3-flash → 2.5-pro → 2.5-flash → 2.5-flash-lite)
+- **모델 Fallback**: 선택 모델부터 하위 모델로 5단계 자동 전환 (3.1-pro → 3-flash → 2.5-pro → 2.5-flash → 2.5-flash-lite)
 - **고정 프롬프트**: gemini CLI의 `-p` 옵션에는 항상 고정 프롬프트 적용 (`"입력된 자료에 대한 답변요청. 필요한 경우 웹 검색을 통해 최신 정보를 조사하여 활용하고, 출처를 함께 제시. ultrathink"`)
 - **stdin 구조화**: `-p` 인자의 상세 지시사항과 INPUT_FILE을 구조화하여 stdin에 결합
 - **JSON 파싱**: `-o json` 자동 적용, `response` 필드 자동 추출
