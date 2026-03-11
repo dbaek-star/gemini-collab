@@ -228,6 +228,7 @@ Gemini 호출: **무제한**
 | 요구사항 | 상세 |
 |:---------|:-----|
 | **Claude Code** | [Anthropic 공식 CLI](https://docs.anthropic.com/en/docs/claude-code) |
+| **Node.js** | 20.0.0 이상 ([다운로드](https://nodejs.org)) — npm 및 Gemini CLI 실행에 필요 |
 | **Gemini CLI** | `npm install -g @google/gemini-cli` |
 | **Python** | 3.x (표준 라이브러리만 사용 — pip 패키지 불필요) |
 | **Gemini 인증** | Gemini CLI 인증 완료 (`gemini` 명령어 실행 가능해야 함) |

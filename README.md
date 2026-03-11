@@ -228,6 +228,7 @@ Best for: Controversial topics
 | Requirement | Details |
 |:------------|:--------|
 | **Claude Code** | [Anthropic's official CLI](https://docs.anthropic.com/en/docs/claude-code) |
+| **Node.js** | 20.0.0 or later ([download](https://nodejs.org)) — required for npm and Gemini CLI |
 | **Gemini CLI** | `npm install -g @google/gemini-cli` |
 | **Python** | 3.x (standard library only — no pip packages required) |
 | **Gemini Auth** | Gemini CLI must be authenticated (`gemini` command should work) |
