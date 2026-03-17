@@ -54,12 +54,12 @@ questions:
   - question: "Gemini 모델을 선택해주세요."
     header: "Gemini 모델"
     options:
-      - label: "gemini-3.1-pro (Recommended)"
-        description: "최신 최고 성능. 복잡한 추론·코딩에 적합"
-      - label: "gemini-3-flash"
-        description: "빠르고 저렴. 일반 작업에 적합"
+      - label: "gemini-3-pro (Recommended)"
+        description: "Pro 계열 메인 모델. 복잡한 추론·코딩에 적합"
       - label: "gemini-2.5-pro"
         description: "안정적 성능. 검증된 모델"
+      - label: "gemini-3-flash"
+        description: "빠르고 저렴. 일반 작업에 적합"
       - label: "gemini-2.5-flash"
         description: "경량 고속. 단순 작업에 적합"
 ```
@@ -68,9 +68,9 @@ questions:
 
 | 사용자 선택 | `-m` 값 |
 |------------|---------|
-| gemini-3.1-pro | `gemini-3.1-pro-preview` |
-| gemini-3-flash | `gemini-3-flash-preview` |
+| gemini-3-pro | `gemini-3-pro-preview` |
 | gemini-2.5-pro | `gemini-2.5-pro` |
+| gemini-3-flash | `gemini-3-flash-preview` |
 | gemini-2.5-flash | `gemini-2.5-flash` |
 | (Other 입력) | 입력값 그대로 |
 
