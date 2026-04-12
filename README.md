@@ -389,7 +389,7 @@ claude-collab/
 | **Subagent via Agent tool** | Direct in-process invocation — no external CLI, no Python wrapper, zero dependencies |
 | **No fixed prompts** | Each subagent call gets a dynamically generated prompt based on topic, round, mode, and prior feedback |
 | **Independent reviewer** | Subagent operates independently from main Claude, ensuring genuine critical evaluation |
-| **SendMessage for sessions** | Multi-round conversations can use SendMessage to maintain reviewer context across rounds |
+| **Context injection per round** | Each round spawns a fresh subagent with prior context injected into the prompt — no experimental flags needed |
 | **Zero dependencies** | Only requires Claude Code — no npm, Python, or external tools |
 
 ### Subagent Call Pattern
