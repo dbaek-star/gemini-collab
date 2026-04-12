@@ -1,0 +1,11 @@
+# Gemini collab output files
+.gemini/collab/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+.DS_Store
+Thumbs.db
